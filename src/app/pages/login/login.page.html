@@ -11,14 +11,14 @@
           <div class=" justify-content-center form_container">
             <form [formGroup]="validationsForm" (ngSubmit)="onSubmit(validationsForm.value)">
               <mat-form-field appearance="outline">
-                <mat-label>username</mat-label>
-                <input type="text" formControlName="username" matInput placeholder="username">
+                <mat-label>Employee Code</mat-label>
+                <input type="text" formControlName="employeeCode" matInput placeholder="employeeCode">
                 <mat-icon matSuffix>person_outline</mat-icon>
               </mat-form-field>
               <div class="validation-errors">
-                <ng-container *ngFor="let validation of errorMsg.validationMSG.username">
+                <ng-container *ngFor="let validation of errorMsg.validationMSG.employeeCode">
                   <div class="error-message"
-                    *ngIf="validationsForm.get('username').hasError(validation.type) && (validationsForm.get('username').dirty || validationsForm.get('username').touched)">
+                    *ngIf="validationsForm.get('employeeCode').hasError(validation.type) && (validationsForm.get('employeeCode').dirty || validationsForm.get('employeeCode').touched)">
                     <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
                   </div>
                 </ng-container>

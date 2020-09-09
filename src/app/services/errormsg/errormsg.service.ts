@@ -11,6 +11,9 @@ export class ErrormsgService {
       { type: 'required', message: 'Name is required.' },
       { type: 'pattern', message: 'Number are not allowed' }
     ],
+    employeeCode: [
+      { type: 'required', message: 'Employee Code is required.' },
+    ],
     email: [
       { type: 'required', message: 'Email is required.' },
       { type: 'pattern', message: 'Please enter a valid email.' }

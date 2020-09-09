@@ -26,7 +26,7 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
     this.validationsForm = this.formBuilder.group({
-      username: new FormControl('', Validators.compose([
+      employeeCode: new FormControl('', Validators.compose([
         Validators.required,
       ])),
       password: new FormControl('', Validators.compose([
@@ -43,7 +43,7 @@ export class LoginPage implements OnInit {
   onSubmit(values) {
     this.loader.present(`Please Wait ... `);
     const bodyValues = {
-      "operator_emp_name" : values.username,
+      "operator_emp_code" : values.employeeCode,
       "Password" : values.password
     };
     this.config.postData('login_in', bodyValues).subscribe(res => {
