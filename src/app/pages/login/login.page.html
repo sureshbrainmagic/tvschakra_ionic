@@ -25,9 +25,10 @@
               </div>
               <mat-form-field appearance="outline">
                 <mat-label>Password</mat-label>
-                <input matInput type="password" formControlName="password" placeholder="Your password"
+                <input matInput [type]="showPassword ? 'password' : 'text'" formControlName="password" placeholder="Your password"
                   style="width: 100%;">
-                <mat-icon matSuffix>lock</mat-icon>
+                <mat-icon (click)="onPasswordToggle()" *ngIf="showPassword"  matSuffix>lock</mat-icon>
+                <mat-icon (click)="onPasswordToggle()" *ngIf="!showPassword" matSuffix>lock_open</mat-icon>
                 <!-- <mat-hint>Min 8 char 1 number and 1 alpha</mat-hint> -->
               </mat-form-field>
               <div class="validation-errors">

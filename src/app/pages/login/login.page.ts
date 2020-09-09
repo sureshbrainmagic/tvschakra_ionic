@@ -13,6 +13,8 @@ import { Router } from '@angular/router';
 })
 export class LoginPage implements OnInit {
   validationsForm: FormGroup;
+  public showPassword: boolean = true;
+
   constructor(
     public formBuilder: FormBuilder,
     public errorMsg: ErrormsgService,
@@ -32,6 +34,10 @@ export class LoginPage implements OnInit {
         Validators.required
       ])),
     });
+  }
+
+  onPasswordToggle(): void {
+    this.showPassword = !this.showPassword;
   }
 
   onSubmit(values) {
