@@ -17,9 +17,9 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
     const lsOperator = JSON.parse(localStorage.getItem('lsOperator'));
-    // console.log(lsOperator);
+    console.log(lsOperator);
     // console.log(lsOperator.username);
-    this.getOperatorTaskCount(lsOperator.username);
+    this.getOperatorTaskCount(lsOperator.operator_emp_code);
   }
 
   getOperatorTaskCount(empCode) {

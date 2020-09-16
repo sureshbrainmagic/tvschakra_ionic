@@ -18,7 +18,7 @@ export class TodayallocatedtestPage implements OnInit {
 
   ngOnInit() {
     const lsOperator = JSON.parse(localStorage.getItem('lsOperator'));
-    this.getOperatorTask(lsOperator.username);
+    this.getOperatorTask(lsOperator.operator_emp_code);
   }
 
   getOperatorTask(empCode) {

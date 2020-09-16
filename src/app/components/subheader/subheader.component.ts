@@ -1,13 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
-
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+  selector: 'app-subheader',
+  templateUrl: './subheader.component.html',
+  styleUrls: ['./subheader.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class SubheaderComponent implements OnInit {
 
   lsOperator: any;
   @Input() heading: boolean = false;
@@ -32,5 +31,6 @@ export class HeaderComponent implements OnInit {
     // }
     this.location.back();
   }
+
 
 }

@@ -18,7 +18,27 @@ const routes: Routes = [
   },
   {
     path: 'todayallocatedtest',
-    loadChildren: () => import('./pages/test/todayallocatedtest/todayallocatedtest.module').then( m => m.TodayallocatedtestPageModule)
+    loadChildren: () => import('./test/todayallocatedtest/todayallocatedtest.module').then( m => m.TodayallocatedtestPageModule)
+  },
+  {
+    path: 'inlfateddimension',
+    loadChildren: () => import('./test/inlfateddimension/inlfateddimension.module').then( m => m.InlfateddimensionPageModule)
+  },
+  {
+    path: 'footprint',
+    loadChildren: () => import('./test/footprint/footprint.module').then( m => m.FootprintPageModule)
+  },
+  {
+    path: 'plunger',
+    loadChildren: () => import('./test/plunger/plunger.module').then( m => m.PlungerPageModule)
+  },
+  {
+    path: 'punger',
+    loadChildren: () => import('./test/punger/punger.module').then( m => m.PungerPageModule)
+  },
+  {
+    path: 'testlist',
+    loadChildren: () => import('./testlist/testlist.module').then( m => m.TestlistPageModule)
   },
 
 ];
